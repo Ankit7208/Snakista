@@ -1,5 +1,3 @@
-# Snakista
-Dry fresh snacks for every carving 
 <!DOCTYPE html>
 <html lang="en">
 <head>
