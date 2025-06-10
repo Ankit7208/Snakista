@@ -132,7 +132,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Purple Café | Designed with 💜
+    &copy; 2025 Snakista Café | Designed with 💜
   </footer>
 
   <script>
