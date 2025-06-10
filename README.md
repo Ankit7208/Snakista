@@ -122,7 +122,7 @@
   <section id="about">
     <h2>About Us</h2>
     <p style="max-width: 600px; margin: auto; text-align: center">
-      Purple Café is a cozy corner for coffee lovers and foodies. We specialize in brewing happiness in every cup and baking joy into every bite. Come visit us and taste the purple magic!
+      Snakista Café is a cozy corner for coffee lovers and foodies. We specialize in brewing happiness in every cup and baking joy into every bite. Come visit us and taste the snakista's magic!
     </p>
   </section>
 
