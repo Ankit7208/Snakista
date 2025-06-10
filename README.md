@@ -1,161 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snakista - Taste the Tradition!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purple Cafe</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #fff0f8;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f5e6ff, #e0b3ff);
+      color: #3c096c;
     }
-    header, nav, footer {
-      background-color: #800080;
+    header {
+      background-color: #da70ff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
       color: white;
-      padding: 1em;
-      text-align: center;
+      font-size: 1.8rem;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
-    h1, h2 {
-      color: #800080;
-    }
-    .section {
-      padding: 2em;
+    .filters {
       text-align: center;
+      margin: 1rem;
     }
-    .products {
+    .filters button {
+      background-color: #da70ff;
+      color: white;
+      border: none;
+      margin: 0.2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .filters button:hover {
+      background-color: #e0aaff;
+    }
+    .menu-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1em;
-      margin-top: 1em;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1rem;
     }
-    .product {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1em;
+    .item {
+      background-color: #f9e6ff;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 5px #ccc;
     }
-    .product img {
+    .item img {
       width: 100%;
       height: 150px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1em;
-      padding: 0.5em 1em;
-      background-color: #800080;
+    .item h4 {
+      margin: 0.5rem 0 0.2rem;
+    }
+    .item p {
+      margin: 0.2rem 0;
+      font-weight: bold;
+    }
+    .item a button {
+      background-color: #c77dff;
       color: white;
-      text-decoration: none;
+      border: none;
+      padding: 0.5rem;
+      width: 100%;
       border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      padding: 2rem 1rem;
     }
     footer {
-      margin-top: 2em;
+      background-color: #b565e0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Snakista</h1>
-    <p>Taste the Love, Spice the Life</p>
+    <h1>Purple Café</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <section id="home" class="section">
-    <h2>Welcome to Snakista!</h2>
-    <p>Delicious dry snacks, fresh mixes & desi flavours served with love.</p>
+  <section id="menu">
+    <h2 style="text-align:center">Our Menu</h2>
+    <div class="filters">
+      <button onclick="filterItems('all')">All</button>
+      <button onclick="filterItems('coffee')">Coffee</button>
+      <button onclick="filterItems('tea')">Tea</button>
+      <button onclick="filterItems('dessert')">Desserts</button>
+      <button onclick="filterItems('snack')">Snacks</button>
+    </div>
+    <div class="menu-section" id="menu-items">
+      <!-- 30 products -->
+      <script>
+        const products = [
+          { name: 'Cappuccino', price: 150, category: 'coffee', img: 'cappuccino' },
+          { name: 'Latte', price: 160, category: 'coffee', img: 'latte' },
+          { name: 'Espresso', price: 140, category: 'coffee', img: 'espresso' },
+          { name: 'Mocha', price: 170, category: 'coffee', img: 'mocha' },
+          { name: 'Americano', price: 130, category: 'coffee', img: 'americano' },
+          { name: 'Cold Brew', price: 180, category: 'coffee', img: 'coldbrew' },
+
+          { name: 'Masala Chai', price: 120, category: 'tea', img: 'chai' },
+          { name: 'Green Tea', price: 110, category: 'tea', img: 'green-tea' },
+          { name: 'Lemon Tea', price: 115, category: 'tea', img: 'lemon-tea' },
+          { name: 'Herbal Tea', price: 130, category: 'tea', img: 'herbal-tea' },
+          { name: 'Milk Tea', price: 125, category: 'tea', img: 'milk-tea' },
+          { name: 'Iced Tea', price: 140, category: 'tea', img: 'iced-tea' },
+
+          { name: 'Chocolate Cake', price: 200, category: 'dessert', img: 'cake' },
+          { name: 'Donut', price: 100, category: 'dessert', img: 'donut' },
+          { name: 'Brownie', price: 130, category: 'dessert', img: 'brownie' },
+          { name: 'Cupcake', price: 110, category: 'dessert', img: 'cupcake' },
+          { name: 'Ice Cream', price: 90, category: 'dessert', img: 'ice-cream' },
+          { name: 'Pudding', price: 120, category: 'dessert', img: 'pudding' },
+
+          { name: 'Veg Sandwich', price: 140, category: 'snack', img: 'sandwich' },
+          { name: 'French Fries', price: 130, category: 'snack', img: 'fries' },
+          { name: 'Samosa', price: 50, category: 'snack', img: 'samosa' },
+          { name: 'Burger', price: 150, category: 'snack', img: 'burger' },
+          { name: 'Roll', price: 120, category: 'snack', img: 'roll' },
+          { name: 'Nachos', price: 140, category: 'snack', img: 'nachos' },
+
+          { name: 'Hot Chocolate', price: 170, category: 'coffee', img: 'hot-chocolate' },
+          { name: 'Affogato', price: 200, category: 'coffee', img: 'affogato' },
+          { name: 'Tiramisu', price: 220, category: 'dessert', img: 'tiramisu' },
+          { name: 'Garlic Bread', price: 110, category: 'snack', img: 'garlic-bread' },
+          { name: 'Paneer Tikka', price: 180, category: 'snack', img: 'paneer-tikka' },
+          { name: 'Fruit Salad', price: 100, category: 'dessert', img: 'fruit-salad' },
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.getElementById("menu-items");
+          container.innerHTML = products.map(p => `
+            <div class="item ${p.category}">
+              <img src="https://source.unsplash.com/300x200/?${p.img}" alt="${p.name}">
+              <h4>${p.name}</h4>
+              <p>₹${p.price}</p>
+              <a href="https://wa.me/917208731279?text=I%20want%20to%20order%20${p.name}"><button>Order</button></a>
+            </div>
+          `).join('');
+        });
+      </script>
+    </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Us</h2>
-    <p>Snakista brings you the best of Indian traditional snacks with a modern twist. We focus on quality, taste and customer happiness.</p>
+    <p style="max-width: 600px; margin: auto; text-align: center">
+      Purple Café is a cozy corner for coffee lovers and foodies. We specialize in brewing happiness in every cup and baking joy into every bite. Come visit us and taste the purple magic!
+    </p>
   </section>
 
-  <section id="products" class="section">
-    <h2>Our Menu</h2>
-
-    <h3>Bhel & Mixes</h3>
-    <div class="products">
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?bhel" alt="Shuka Bhel">
-        <h4>Shuka Bhel - ₹25</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Shuka Bhel">Order Now</a>
-      </div>
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?bhel,puffedrice" alt="Spicy Bhel">
-        <h4>Spicy Bhel - ₹30</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Spicy Bhel">Order Now</a>
-      </div>
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?namkeen" alt="Mixed Chaat">
-        <h4>Mixed Chaat - ₹35</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Mixed Chaat">Order Now</a>
-      </div>
-    </div>
-
-    <h3>Bhujia & Namkeen</h3>
-    <div class="products">
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?bhujia" alt="Aloo Bhujia">
-        <h4>Aloo Bhujia - ₹30</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Aloo Bhujia">Order Now</a>
-      </div>
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?moongdal" alt="Moong Dal">
-        <h4>Moong Dal - ₹40</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Moong Dal">Order Now</a>
-      </div>
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?namkeen" alt="Masala Peanuts">
-        <h4>Masala Peanuts - ₹35</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Masala Peanuts">Order Now</a>
-      </div>
-    </div>
-
-    <h3>Beverages</h3>
-    <div class="products">
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?chai" alt="Masala Chai">
-        <h4>Masala Chai - ₹15</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Masala Chai">Order Now</a>
-      </div>
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?coffee" alt="Filter Coffee">
-        <h4>Filter Coffee - ₹25</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Filter Coffee">Order Now</a>
-      </div>
-    </div>
-
-    <h3>Combos</h3>
-    <div class="products">
-      <div class="product">
-        <img src="https://source.unsplash.com/200x150/?snacks,tea" alt="Combo Pack">
-        <h4>Combo Pack (Chai + Nasta) - ₹89</h4>
-        <a class="btn" href="https://wa.me/917208731279?text=I want to order Combo Pack">Order Now</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p>Phone/WhatsApp: <a href="https://wa.me/917208731279">+91 72087 31279</a></p>
-    <p>Email: snakista@gmail.com</p>
+    <p style="text-align: center">📞 +91 72087 31279 | 📍 Mumbai, India</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Snakista. All rights reserved.</p>
+    &copy; 2025 Purple Café | Designed with 💜
   </footer>
+
+  <script>
+    function filterItems(category) {
+      const items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
