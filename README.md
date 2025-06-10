@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Purple Café</title>
+  <title>Snakista Café</title>
   <style>
     body {
       margin: 0;
@@ -125,7 +124,7 @@
 <body>
 
   <header>
-    <h1>Purple Café</h1>
+    <h1>Snakista Café</h1>
     <nav>
       <a href="#menu">Menu</a>
       <a href="#about">About</a>
