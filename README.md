@@ -1,148 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snakista Cafe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snakista - Taste the Tradition!</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
     body {
-      background-color: #f9f5fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff0f8;
       color: #333;
     }
-    header {
-      background-color: #6a0dad;
-      padding: 1.5rem;
-      text-align: center;
+    header, nav, footer {
+      background-color: #800080;
       color: white;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #55007a;
-      padding: 0.8rem;
+      padding: 1em;
+      text-align: center;
     }
     nav a {
       color: white;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
     }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    }
-    .hero h1 {
-      font-size: 3rem;
+    h1, h2 {
+      color: #800080;
     }
     .section {
-      padding: 3rem 2rem;
+      padding: 2em;
       text-align: center;
     }
     .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+      margin-top: 1em;
     }
-    .card {
-      background-color: white;
-      width: 250px;
+    .product {
+      background: #fff;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
+      padding: 1em;
     }
-    .card img {
+    .product img {
       width: 100%;
-      height: 170px;
+      height: 150px;
       object-fit: cover;
+      border-radius: 10px;
     }
-    .card h3 {
-      margin: 1rem 0 0.5rem;
-    }
-    .card p {
-      color: #666;
-      margin-bottom: 1rem;
-    }
-    .order-btn {
+    .btn {
       display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #6a0dad;
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background-color: #800080;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 5px;
     }
     footer {
-      background-color: #2f003f;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+      margin-top: 2em;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Snakista Cafe</h1>
+    <h1>Snakista</h1>
     <p>Taste the Love, Spice the Life</p>
   </header>
-
   <nav>
     <a href="#home">Home</a>
-    <a href="#menu">Menu</a>
     <a href="#about">About</a>
+    <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="hero" id="home">
-    <h1>Welcome to Snakista</h1>
+  <section id="home" class="section">
+    <h2>Welcome to Snakista!</h2>
+    <p>Delicious dry snacks, fresh mixes & desi flavours served with love.</p>
   </section>
 
-  <section class="section" id="menu">
-    <h2>Our Specialties</h2>
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Snakista brings you the best of Indian traditional snacks with a modern twist. We focus on quality, taste and customer happiness.</p>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Our Menu</h2>
+
+    <h3>Bhel & Mixes</h3>
     <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/250x170/?bhel,snacks" alt="Shuka Bhel">
-        <h3>Shuka Bhel</h3>
-        <p>Only ₹25</p>
-        <a href="https://wa.me/917208731279?text=I%20want%20to%20order%20Shuka%20Bhel" class="order-btn">Order</a>
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?bhel" alt="Shuka Bhel">
+        <h4>Shuka Bhel - ₹25</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Shuka Bhel">Order Now</a>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/250x170/?spicy-food" alt="Spicy Bhel">
-        <h3>Spicy Bhel</h3>
-        <p>Only ₹30</p>
-        <a href="https://wa.me/917208731279?text=I%20want%20to%20order%20Spicy%20Bhel" class="order-btn">Order</a>
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?bhel,puffedrice" alt="Spicy Bhel">
+        <h4>Spicy Bhel - ₹30</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Spicy Bhel">Order Now</a>
       </div>
-      <!-- Add more cards below similarly -->
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?namkeen" alt="Mixed Chaat">
+        <h4>Mixed Chaat - ₹35</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Mixed Chaat">Order Now</a>
+      </div>
+    </div>
+
+    <h3>Bhujia & Namkeen</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?bhujia" alt="Aloo Bhujia">
+        <h4>Aloo Bhujia - ₹30</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Aloo Bhujia">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?moongdal" alt="Moong Dal">
+        <h4>Moong Dal - ₹40</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Moong Dal">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?namkeen" alt="Masala Peanuts">
+        <h4>Masala Peanuts - ₹35</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Masala Peanuts">Order Now</a>
+      </div>
+    </div>
+
+    <h3>Beverages</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?chai" alt="Masala Chai">
+        <h4>Masala Chai - ₹15</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Masala Chai">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?coffee" alt="Filter Coffee">
+        <h4>Filter Coffee - ₹25</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Filter Coffee">Order Now</a>
+      </div>
+    </div>
+
+    <h3>Combos</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://source.unsplash.com/200x150/?snacks,tea" alt="Combo Pack">
+        <h4>Combo Pack (Chai + Nasta) - ₹89</h4>
+        <a class="btn" href="https://wa.me/917208731279?text=I want to order Combo Pack">Order Now</a>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <h2>About Us</h2>
-    <p>We are a modern snack café that brings you the best of traditional flavors with a twist of style. Experience love in every bite!</p>
-  </section>
-
-  <section class="section" id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Order via WhatsApp: <a href="https://wa.me/917208731279">+91 72087 31279</a></p>
+    <p>Phone/WhatsApp: <a href="https://wa.me/917208731279">+91 72087 31279</a></p>
+    <p>Email: snakista@gmail.com</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Snakista. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
