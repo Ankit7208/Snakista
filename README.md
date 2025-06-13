@@ -151,11 +151,6 @@
       { name: 'Milk Tea', price: 125, category: 'special plates', img: 'milk-tea' },
       { name: 'Iced Tea', price: 140, category: 'special plates', img: 'iced-tea' },
 
-      { name: 'Chocolate Cake', price: 200, category: 'Sweet munchies', img: 'cake' },
-      { name: 'Donut', price: 100, category: 'Sweet munchies', img: 'donut' },
-      { name: 'Brownie', price: 130, category: 'Sweet munchies', img: 'brownie' },
-      { name: 'Cupcake', price: 110, category: 'Sweet munchies', img: 'cupcake' },
-      
       { name: 'sev', price: 140, category: 'snack', img: 'sandwich' },
       { name: 'ghatiya', price: 130, category: 'snack', img: 'fries' },
       { name: 'Samosa', price: 50, category: 'snack', img: 'samosa' },
@@ -166,13 +161,16 @@
       { name: 'garlic chivada', price: 200, category: 'snack', img: 'affogato' },
       { name: 'Garlic Bread', price: 90, category: 'snack', img: 'ice-cream' },
       { name: 'Pudding', price: 120, category: 'snack', img: 'pudding' },
-      
 
-      
       { name: 'Tiramisu', price: 220, category: 'Sweet munchies', img: 'tiramisu' },
       { name: 'Garlic Bread', price: 110, category: 'Sweet munchies', img: 'garlic-bread' },
       { name: 'Paneer Tikka', price: 180, category: 'Sweet munchies', img: 'paneer-tikka' },
       { name: 'Fruit Salad', price: 100, category: 'Sweet munchies', img: 'fruit-salad' },
+      { name: 'Chocolate Cake', price: 200, category: 'Sweet munchies', img: 'cake' },
+      { name: 'Donut', price: 100, category: 'Sweet munchies', img: 'donut' },
+      { name: 'Brownie', price: 130, category: 'Sweet munchies', img: 'brownie' },
+      { name: 'Cupcake', price: 110, category: 'Sweet munchies', img: 'cupcake' },
+      
     ];
 
     document.addEventListener("DOMContentLoaded", () => {
