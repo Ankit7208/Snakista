@@ -111,9 +111,9 @@
     <h2 style="text-align:center">Our Menu</h2>
     <div class="filters">
       <button onclick="filterItems('all')">All</button>
-      <button onclick="filterItems('coffee')">Coffee</button>
-      <button onclick="filterItems('tea')">Tea</button>
-      <button onclick="filterItems('dessert')">Desserts</button>
+      <button onclick="filterItems('Bhel & mixes')">Bhel & mixes</button>
+      <button onclick="filterItems('special plates')">special plates</button>
+      <button onclick="filterItems('Sweet munchies')">Sweet munchies</button>
       <button onclick="filterItems('snack')">Snacks</button>
     </div>
     <div class="menu-section" id="menu-items"></div>
@@ -137,41 +137,42 @@
 
   <script>
     const products = [
-      { name: 'Cappuccino', price: 150, category: 'coffee', img: 'cappuccino' },
-      { name: 'Latte', price: 160, category: 'coffee', img: 'latte' },
-      { name: 'Espresso', price: 140, category: 'coffee', img: 'espresso' },
-      { name: 'Mocha', price: 170, category: 'coffee', img: 'mocha' },
-      { name: 'Americano', price: 130, category: 'coffee', img: 'americano' },
-      { name: 'Cold Brew', price: 180, category: 'coffee', img: 'coldbrew' },
+      { name: 'Dry spicy bhel', price: 150, category: 'Bhel & mixes', img: 'cappuccino' },
+      { name: 'khata meetha', price: 160, category: 'Bhel & mixes', img: 'latte' },
+      { name: 'Frali mix', price: 140, category: 'Bhel & mixes', img: 'espresso' },
+      { name: 'Mocha', price: 170, category: 'Bhel & mixes', img: 'mocha' },
+      { name: 'Navratan mix', price: 130, category: 'Bhel & mixes', img: 'americano' },
+      { name: 'Poha', price: 180, category: 'Bhel & mixes', img: 'coldbrew' },
 
-      { name: 'Masala Chai', price: 120, category: 'tea', img: 'chai' },
-      { name: 'Green Tea', price: 110, category: 'tea', img: 'green-tea' },
-      { name: 'Lemon Tea', price: 115, category: 'tea', img: 'lemon-tea' },
-      { name: 'Herbal Tea', price: 130, category: 'tea', img: 'herbal-tea' },
-      { name: 'Milk Tea', price: 125, category: 'tea', img: 'milk-tea' },
-      { name: 'Iced Tea', price: 140, category: 'tea', img: 'iced-tea' },
+      { name: 'Masala Chai', price: 120, category: 'special plates ', img: 'chai' },
+      { name: 'Green Tea', price: 110, category: 'special plates', img: 'green-tea' },
+      { name: 'Lemon Tea', price: 115, category: 'special plates', img: 'lemon-tea' },
+      { name: 'Herbal Tea', price: 130, category: 'special plates', img: 'herbal-tea' },
+      { name: 'Milk Tea', price: 125, category: 'special plates', img: 'milk-tea' },
+      { name: 'Iced Tea', price: 140, category: 'special plates', img: 'iced-tea' },
 
-      { name: 'Chocolate Cake', price: 200, category: 'dessert', img: 'cake' },
-      { name: 'Donut', price: 100, category: 'dessert', img: 'donut' },
-      { name: 'Brownie', price: 130, category: 'dessert', img: 'brownie' },
-      { name: 'Cupcake', price: 110, category: 'dessert', img: 'cupcake' },
-      { name: 'Ice Cream', price: 90, category: 'dessert', img: 'ice-cream' },
-      { name: 'Pudding', price: 120, category: 'dessert', img: 'pudding' },
-
+      { name: 'Chocolate Cake', price: 200, category: 'Sweet munchies', img: 'cake' },
+      { name: 'Donut', price: 100, category: 'Sweet munchies', img: 'donut' },
+      { name: 'Brownie', price: 130, category: 'Sweet munchies', img: 'brownie' },
+      { name: 'Cupcake', price: 110, category: 'Sweet munchies', img: 'cupcake' },
+      
       { name: 'sev', price: 140, category: 'snack', img: 'sandwich' },
       { name: 'ghatiya', price: 130, category: 'snack', img: 'fries' },
       { name: 'Samosa', price: 50, category: 'snack', img: 'samosa' },
       { name: 'papdi', price: 150, category: 'snack', img: 'burger' },
       { name: 'chakli', price: 120, category: 'snack', img: 'roll' },
       { name: 'chivda', price: 140, category: 'snack', img: 'nachos' },
-      { name: 'sakrpara', price: 170, category: 'coffee', img: 'hot-chocolate' },
-      { name: 'garlic chivada', price: 200, category: 'coffee', img: 'affogato' },
+      { name: 'sakrpara', price: 170, category: 'snack', img: 'hot-chocolate' },
+      { name: 'garlic chivada', price: 200, category: 'snack', img: 'affogato' },
+      { name: 'Garlic Bread', price: 90, category: 'snack', img: 'ice-cream' },
+      { name: 'Pudding', price: 120, category: 'snack', img: 'pudding' },
+      
 
       
-      { name: 'Tiramisu', price: 220, category: 'dessert', img: 'tiramisu' },
-      { name: 'Garlic Bread', price: 110, category: 'snack', img: 'garlic-bread' },
-      { name: 'Paneer Tikka', price: 180, category: 'snack', img: 'paneer-tikka' },
-      { name: 'Fruit Salad', price: 100, category: 'dessert', img: 'fruit-salad' },
+      { name: 'Tiramisu', price: 220, category: 'Sweet munchies', img: 'tiramisu' },
+      { name: 'Garlic Bread', price: 110, category: 'Sweet munchies', img: 'garlic-bread' },
+      { name: 'Paneer Tikka', price: 180, category: 'Sweet munchies', img: 'paneer-tikka' },
+      { name: 'Fruit Salad', price: 100, category: 'Sweet munchies', img: 'fruit-salad' },
     ];
 
     document.addEventListener("DOMContentLoaded", () => {
