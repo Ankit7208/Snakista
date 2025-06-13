@@ -112,7 +112,7 @@
     <div class="filters">
       <button onclick="filterItems('all')">All</button>
       <button onclick="filterItems('Bhel & mixes')">Bhel & mixes</button>
-      <button onclick="filterItems('special plates')">special plates</button>
+      <button onclick="filterItems('specialplates')">special plates</button>
       <button onclick="filterItems('Sweet munchies')">Sweet munchies</button>
       <button onclick="filterItems('snack')">Snacks</button>
     </div>
@@ -147,7 +147,7 @@
       { name: 'Masala Chai', price: 120, category: 'special plates ', img: 'chai' },
       { name: 'Green Tea', price: 110, category: 'special plates', img: 'green-tea' },
       { name: 'Lemon Tea', price: 115, category: 'special plates', img: 'lemon-tea' },
-      { name: 'Herbal Tea', price: 130, category: 'special plates', img: 'herbal-tea' },
+      { name: 'Herbal Tea', price: 130, category: 'specialplates', img: 'herbal-tea' },
       { name: 'Milk Tea', price: 125, category: 'special plates', img: 'milk-tea' },
       { name: 'Iced Tea', price: 140, category: 'special plates', img: 'iced-tea' },
 
