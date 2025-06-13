@@ -158,15 +158,16 @@
       { name: 'Ice Cream', price: 90, category: 'dessert', img: 'ice-cream' },
       { name: 'Pudding', price: 120, category: 'dessert', img: 'pudding' },
 
-      { name: 'Veg Sandwich', price: 140, category: 'snack', img: 'sandwich' },
-      { name: 'French Fries', price: 130, category: 'snack', img: 'fries' },
+      { name: 'sev', price: 140, category: 'snack', img: 'sandwich' },
+      { name: 'ghatiya', price: 130, category: 'snack', img: 'fries' },
       { name: 'Samosa', price: 50, category: 'snack', img: 'samosa' },
-      { name: 'Burger', price: 150, category: 'snack', img: 'burger' },
-      { name: 'Roll', price: 120, category: 'snack', img: 'roll' },
-      { name: 'Nachos', price: 140, category: 'snack', img: 'nachos' },
+      { name: 'papdi', price: 150, category: 'snack', img: 'burger' },
+      { name: 'chakli', price: 120, category: 'snack', img: 'roll' },
+      { name: 'chivda', price: 140, category: 'snack', img: 'nachos' },
+      { name: 'sakrpara', price: 170, category: 'coffee', img: 'hot-chocolate' },
+      { name: 'garlic chivada', price: 200, category: 'coffee', img: 'affogato' },
 
-      { name: 'Hot Chocolate', price: 170, category: 'coffee', img: 'hot-chocolate' },
-      { name: 'Affogato', price: 200, category: 'coffee', img: 'affogato' },
+      
       { name: 'Tiramisu', price: 220, category: 'dessert', img: 'tiramisu' },
       { name: 'Garlic Bread', price: 110, category: 'snack', img: 'garlic-bread' },
       { name: 'Paneer Tikka', price: 180, category: 'snack', img: 'paneer-tikka' },
